@@ -1,0 +1,84 @@
+<!-- just press exclamation mark and then press enter and you get a little html template-->
+<!-- html doesn't care about indentation, only for visual effect -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie wrecker</title>
+
+    <style>
+      input:focus, textarea:focus, select:focus{
+          outline: none;
+      }
+  </style>
+
+    <!-- link to css has to be in the head --> 
+    <!-- The root folder is always the recommender although now we're in the templates folder -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!--<link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">--->
+   
+
+  {% block content %}
+
+    <section class="main-splash">
+      <img id="logo_movie" src="/static/images/logo_new.png" alt="Cartamon Logo">
+      <h4 id="title"> Get some personalised recommendations for <span id="highlight">GOOD MOVIES</span><br> to keep you entertained</h4>
+    
+    <script src="/static/js/script.js"></script>
+
+  
+</head>
+<body>
+
+
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/about">About</a>
+    <a href="/models">models</a>
+    <a href="/contact">Contact</a>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+
+  </div>
+
+
+   <!--- <h1>Welcome to the movie wrecker</h1> -->
+
+
+
+
+    <!-- place here recommender algorithm drop down menu-->
+    <label for="recommender_algorithms"></label>
+
+  
+    <!-- Here the user can input their favorite movies -->  
+
+    <!-- Another method to: post request-->
+        <form action = "{{url_for('recommender')}}">  <!--here we define url endpoint-->
+        Type in your top 3 favorite movies!
+        
+        {% for i in range (3) %} <!---submit three movies-->
+
+        <fieldset> 
+        <!-- class="flex_two" this stacks the submit buttons, instead of having them in a row -->  
+        <input type="text" class='no_outline' placeholder ='movie title' name = 'user_movies'>
+        
+        </fieldset>
+        {% endfor %}
+
+        <input type="submit" value="Submit movies">
+      <!--- <input type="submit" value="Submit"> -->  
+      <!--- this returns a url http://127.0.0.1:5000/?user+movies=star+wars> -->
+    </form>
+
+
+
+</body>
+</html>
+
+{% endblock %}

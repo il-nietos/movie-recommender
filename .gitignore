@@ -1,0 +1,8 @@
+*credentials.txt
+*diagnostic.data*
+*__pycache__*
+*ipynb_checkpoints*
+*storage.bson
+*.DS_Store*
+Procfile.windows
+*Data*

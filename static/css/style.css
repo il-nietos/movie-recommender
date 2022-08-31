@@ -1,0 +1,174 @@
+
+/*
+Landing page background color found based on logo color with the use of: https://mycolor.space/?hex=%23845EC2&sub=1
+*/
+
+.main-splash {
+    background-color: #EEE8A9;
+    height: 100vh;
+    color: #49807B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+#title{
+    text-align: center;
+}
+  
+
+/*
+* {
+    background-color: #10449c;
+    margin: 0;
+    padding: 1% 5.5%;    
+    opacity: 1;  
+    }   
+    /* bakcgorund color for recommender#F9F8FF
+*/
+.recommender {
+    background-color: #EEE8A9;
+    border-radius: 10px;
+    padding: 1% 10.8%;
+    margin: 0;
+    opacity: 0.9;
+    justify-content: center;
+    align-items: center;
+}
+
+/* can also use color: rgb(139, 0, 116);
+
+ font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+*/
+
+/*
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    color: #f03f35;
+   }
+*/
+   
+h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-weight: 900;
+    justify-content: center;
+    align-items: center;
+   }
+
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1JlFd2JQEl8qw.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+
+  /*
+Submit button
+  */
+
+input[type=text] {
+    padding:5px 20px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 30px;
+    border-radius: 8px;
+    outline: 0;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+    outline: 0;
+}
+
+.no-outline:focus {
+    outline: 0;
+  }
+
+input[type=submit] {
+    padding:5px 20px; 
+    background:#F9F8FF; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+/* NAVIGATION 
+*/
+
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed;  /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 250, 250); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    opacity: 0.7;
+    padding-top: 50px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  }
+  
+  /* The sidebar links */
+  .sidebar a {
+    padding: 20px 50px 40px 50px;
+    text-decoration: none;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0.5px;
+    right: 5px;
+    font-size: 20px;
+    margin-left: 50px;
+    border-radius: 4px;
+  }
+  
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 20px;
+    top: 0.5px;
+    right: 5px;
+    cursor: pointer;
+    background-color: #111;
+    opacity: 0.5;
+    color: white;
+    padding: 18px 18px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 5px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
