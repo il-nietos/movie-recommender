@@ -27,3 +27,8 @@ cd movie-recommender
 
 [link to be provided]
 
+## Status
+
+Very much under construction.
+
+
